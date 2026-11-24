@@ -15,13 +15,13 @@ What it never does: log in, type or read the OTP, solve a CAPTCHA, tick the Term
 
 Needs Node.js 18+ and Microsoft Edge or Google Chrome.
 
-1. Double-click `book.cmd` (or run `npm install` once, then `node book.js`).
-2. Answer the questions in the terminal: members, ID details, dates, laddus and contact. Your answers are saved to `details.json` and reused next time (`node book.js --new` asks again).
-3. An Edge window opens on the TTD slot page. **Log in with your OTP** (and the captcha, if one is shown). The script carries on by itself as soon as the calendar appears. Your login is kept in `.browser-profile`.
-4. The script picks a slot, sets the tickets and laddus, presses Continue, and fills every pilgrim and the contact details.
-5. Check the browser, then press Enter. It ticks Terms, presses Continue, and on Enter clicks Pay Now. **The payment page opens and you pay yourself.**
+1. Double-click **`Start TTD Booking.vbs`**. No console window opens.
+2. A browser opens with a form. Fill in the members (the form shows one block per member), choose "first available" or specific dates, and optionally the release time. Press **Save & start**. Your details are saved to `details.json` and pre-filled next time.
+3. **Log in with your OTP** in that window. A purple bar at the top shows what the helper is doing.
+4. It waits for the release time, then loads fresh slots. If nothing is free yet, it checks again every 10 s or more. If TTD puts you in a waiting queue, it keeps your place and does not refresh.
+5. When a slot appears, it selects it at once, fills every pilgrim, ticks Terms, and clicks Pay Now. **You pay on the payment page yourself.**
 
-Options: `--browser chrome` uses Chrome instead of Edge. Choose "keep checking" to recheck every 15 s or more until a time you set.
+Progress is also written to `book.log`. Add `--chrome` to `node book.js` to use Chrome instead of Edge.
 
 `details.json` and `.browser-profile` contain your personal data. Keep them private.
 
