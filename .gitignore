@@ -1,0 +1,14 @@
+node_modules/
+.browser-profile/
+details.json
+
+# build outputs (regenerate with ttd.cmd / ttd.command)
+bookmarklet.txt
+install.html
+
+# reference screenshots
+WhatsApp Image *.jpeg
+
+# OS junk
+Thumbs.db
+.DS_Store
