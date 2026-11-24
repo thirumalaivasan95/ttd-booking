@@ -1,0 +1,15 @@
+{
+  "name": "ttd",
+  "version": "1.0.0",
+  "description": "A small helper for the **official** Tirumala Tirupati Devasthanams (TTD) \"Special Entry Darshan\" site, `https://ttdevasthanams.ap.gov.in/`. It runs inside your own browser as a bookmarklet or a userscript (Tampermonkey / Userscripts). It works in Chrome, Edge, Firefox and Safari on Windows, Mac, Android and iPhone.",
+  "main": "ttd-helper.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "playwright-core": "1.49.1"
+  }
+}
